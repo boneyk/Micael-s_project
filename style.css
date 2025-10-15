@@ -9,10 +9,10 @@ body {
     color: #4a5568;
 }
 
-header{
+header {
     position: fixed;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
 }
@@ -44,13 +44,14 @@ header{
     height: 80px;
 }
 
-.mobile-menu-toggle{
+.mobile-menu-toggle {
     background-color: #e76f51;
-    border:0;
+    border: 0;
 }
-.mobile-menu-toggle_hidden{
+
+.mobile-menu-toggle_hidden {
     background-color: #e76f51;
-    border:0;
+    border: 0;
     display: none;
 }
 
@@ -256,6 +257,89 @@ footer {
     height: 40px;
 }
 
+.pers__container__title {
+    text-align: center;
+    margin: 40px;
+    font-size: 32px;
+}
+
+.pers__container {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(4, 300px);
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:
+        "menu menu menu"
+        "one two three"
+        "four five six"
+        ". seven .";
+}
+
+.pers__container__menu {
+    grid-area: menu;
+    display: flex;
+    background-color: #e7d1c1;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.pers__container__menu__text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.pers__container__card {
+    background-color: #f9efe7;
+    border-radius: 20px;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s;
+}
+
+.pers__container__card:hover {
+    transform: scale(1.05);
+}
+
+.pers__container__card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* Назначаем области */
+.card1 {
+    grid-area: one;
+}
+
+.card2 {
+    grid-area: two;
+}
+
+.card3 {
+    grid-area: three;
+}
+
+.card4 {
+    grid-area: four;
+}
+
+.card5 {
+    grid-area: five;
+}
+
+.card6 {
+    grid-area: six;
+}
+
+.card7 {
+    grid-area: seven;
+}
+
 
 /* Медиа-запросы для адаптивности */
 
@@ -285,7 +369,7 @@ footer {
 } */
 
 /* Мобильные устройства (480px - 768px) */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     
     .navbar {
         flex-direction: column;
@@ -345,7 +429,7 @@ footer {
     .footer-container {
         margin: 0 20px;
     }
-}
+} */
 
 /* Маленькие мобильные устройства (до 480px) */
 /* @media screen and (max-width: 480px) {
@@ -393,7 +477,7 @@ footer {
     }
 } */
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     .navbar-item,
     #developer,
     .preview,
@@ -417,4 +501,4 @@ footer {
         margin: 10px;
         padding: 15px;
     }
-}
+} */
